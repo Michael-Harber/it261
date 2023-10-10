@@ -25,22 +25,44 @@
 
 <main>
 <h2>About Michael</h2>
-<img class="right" src="images/"  alt="Michael">
-<p>A paragraph about myself, i.e. goals, backgrounds, hobbies, etc. etc.
-Arcu cursus euismod quis viverra nibh cras. Tristique risus nec feugiat in fermentum. Amet cursus sit amet dictum sit amet justo. Porttitor eget dolor morbi non arcu risus quis. Tortor at auctor urna nunc id. At elementum eu facilisis sed odio morbi quis commodo odio. Tincidunt ornare massa eget egestas purus viverra accumsan in. Nibh mauris cursus mattis molestie a iaculis. Fermentum et sollicitudin ac orci phasellus egestas tellus. Pharetra pharetra massa massa ultricies mi quis hendrerit. Dictum sit amet justo donec enim diam. Morbi leo urna molestie at elementum. A arcu cursus vitae congue mauris rhoncus aenean vel. Feugiat in fermentum posuere urna nec tincidunt praesent semper. Risus commodo viverra maecenas accumsan lacus. Scelerisque felis imperdiet proin fermentum leo. Odio pellentesque diam volutpat commodo sed. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Ornare suspendisse sed nisi lacus.    
+<img class="right" src="images/me.jpg"  alt="Michael">
+<p>Hi! I'm Michael and I'm a third semester Web Development student. After having served in the U.S. Navy for 10 years, I've decided to switch careers and try something a little different which is how I ended up here at Seattle Central. I enjoy soccer, reading, movies and video games. I live with my girlfriend and our dog, Bodhi. I'm excited to learn PHP and what it has to offer in the world of Web Development.     
 </p> 
+
+<h2>My MAMP Screenshots!</h2>
+<img src="images/MAMPinstall.png" alt="MAMP Screenshot">
+<img src="images/phperror.png" alt="PHP Error Screenshot">
 </main>
 
 <aside>
 <h2>Weekly Class Exercises</h2> 
 <h3>Week 2</h3>
 <ul>
-    <li><a href="var.php">var.php</li>   
+    <li><a href="weeks/week2/var.php">var.php</li>
+    <li><a href="weeks/week2/vars2.php">vars2.php</li>
+    <li><a href="weeks/week2/currency-logic.php">currency-logic.php</li>
+    <li><a href="weeks/week2/currency.php">currency.php</li> 
+    <li><a href="weeks/week2/heredoc.php">heredoc.php</li>   
 </ul>   
 </aside>
 
 
 </div>
+<footer>
+    <ul>
+        <li>Copyright &copy;
+            2022</li>
+        <li>All Rights Reserved</li>
+        <li><a href="../index.php">Web Design by Michael Harber</a></li>
+        <li><a id="html-checker" href="#">HTML Validation</a></li>
+        <li><a id="css-checker" href="#">CSS Validation</a></li>
+    </ul>
+    <script>
+        document.getElementById("html-checker").setAttribute("href","https://validator.w3.org/nu/?doc=" + location.href);
+        document.getElementById("css-checker").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
+</footer>
+
 
 </body>
 </html>

@@ -1,8 +1,8 @@
 /* Styles for my portal page! */
 
 * {
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
 }
 
@@ -13,7 +13,7 @@ body {
 
 #wrapper {
        max-width:1200px;
-       margin: 20 px auto;
+       margin: 20px auto;
 }
 
 nav {

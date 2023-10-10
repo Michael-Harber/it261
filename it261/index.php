@@ -25,14 +25,15 @@
 
 <main>
 <h2>About Michael</h2>
-<img class="right" src="images/me.jpg"  alt="Michael">
 <p>Hi! I'm Michael and I'm a third semester Web Development student. After having served in the U.S. Navy for 10 years, I've decided to switch careers and try something a little different which is how I ended up here at Seattle Central. I enjoy soccer, reading, movies and video games. I live with my girlfriend and our dog, Bodhi. I'm excited to learn PHP and what it has to offer in the world of Web Development.     
 </p> 
+<img class="right" src="images/me.jpg"  alt="Michael">
 
 <h2>My MAMP Screenshots!</h2>
 <img src="images/MAMPinstall.png" alt="MAMP Screenshot">
 <img src="images/phperror.png" alt="PHP Error Screenshot">
-</main>
+
+
 
 <aside>
 <h2>Weekly Class Exercises</h2> 
@@ -43,7 +44,10 @@
     <li><a href="weeks/week2/currency-logic.php">currency-logic.php</li>
     <li><a href="weeks/week2/currency.php">currency.php</li> 
     <li><a href="weeks/week2/heredoc.php">heredoc.php</li>   
-</ul>   
+</ul>  
+
+
+</main>
 </aside>
 
 

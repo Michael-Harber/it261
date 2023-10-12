@@ -39,11 +39,11 @@
 <h2>Weekly Class Exercises</h2> 
 <h3>Week 2</h3>
 <ul>
-    <li><a href="weeks/week2/var.php">var.php</li>
-    <li><a href="weeks/week2/vars2.php">vars2.php</li>
-    <li><a href="weeks/week2/currency-logic.php">currency-logic.php</li>
-    <li><a href="weeks/week2/currency.php">currency.php</li> 
-    <li><a href="weeks/week2/heredoc.php">heredoc.php</li>   
+    <li><a href="weeks/week2/var.php">var.php</a></li>
+    <li><a href="weeks/week2/vars2.php">vars2.php</a></li>
+    <li><a href="weeks/week2/currency-logic.php">currency-logic.php</a></li>
+    <li><a href="weeks/week2/currency.php">currency.php</a></li> 
+    <li><a href="weeks/week2/heredoc.php">heredoc.php</a></li>   
 </ul>  
 
 

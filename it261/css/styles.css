@@ -35,6 +35,17 @@ nav a {
     text-decoration: none;
 }
 
+img {
+    width:95%;
+    float:left;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    padding: 1em;
+}
+
 /* typography */
 
 h1 {

@@ -29,9 +29,9 @@
 </p> 
 <img class="right" src="images/me.jpg"  alt="Michael">
 
-<h2>My MAMP Screenshots!</h2>
+<!-- <h2>My MAMP Screenshots!</h2>
 <img src="images/MAMPinstall.png" alt="MAMP Screenshot">
-<img src="images/phperror.png" alt="PHP Error Screenshot">
+<img src="images/phperror.png" alt="PHP Error Screenshot"> -->
 
 
 
@@ -45,10 +45,20 @@
     <li><a href="weeks/week2/currency.php">currency.php</a></li> 
     <li><a href="weeks/week2/heredoc.php">heredoc.php</a></li>   
 </ul>  
+ 
+<h3>Week 3</h3>
+<ul>
+    <li><a href="weeks/week3/if.php">if.php</a></li>
+    <li><a href="weeks/week3/date.php">date.php</a></li>
+    <li><a href="weeks/week3/for-each.php">for-each.php</a></li>
+    <li><a href="weeks/week3/for-loop.php">for-loop.php</a></li> 
+    <li><a href="weeks/week3/index.php">index.php</a></li>
+    <li><a href="weeks/week3/switch.php">switch.php</a></li>   
+</ul>  
 
-
-</main>
 </aside>
+</main>
+
 
 
 </div>

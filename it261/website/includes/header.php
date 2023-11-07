@@ -1,50 +1,4 @@
-<?php
 
-define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
-
-switch(THIS_PAGE) {
-    case 'index.php' :
-    $title = 'Home page of our Wesbite Project';
-    $body = 'home';
-    break;
-
-    case 'about.php' :
-    $title = 'About page of our Wesbite Project';
-    $body = 'about';
-    break;
-
-    case 'daily.php' :
-    $title = 'Daily page of our Wesbite Project';
-    $body = 'daily';
-    break;
-
-    case 'project.php' :
-    $title = 'Project page of our Wesbite Project';
-    $body = 'project';
-    break;
-
-    case 'contact.php' :
-    $title = 'Contact page of our Wesbite Project';
-    $body = 'contact';
-    break;
-    
-    case 'gallery.php' :
-    $title = 'Gallery page of our Wesbite Project';
-    $body = 'gallery';
-    break;
-}
-// our navigational array
-$nav = array(
-    'index.php' => 'Home',
-    'about.php' => 'About',
-    'daily.php' => 'Daily',
-    'project.php' => 'Project',
-    'contact.php' => 'Contact',
-    'gallery.php' => 'Gallery'
-);
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,14 +27,7 @@ $nav = array(
 <nav>
 <ul>
 <?php
-foreach($nav as $key => $value) {
-if(THIS_PAGE ==$key) {
-echo '<li><a style="color:red;" href="'.$key.'">'.$value.'</a></li>';
-} else {
-echo '<li><a style="color:green;" href="'.$key.'">'.$value.'</a></li>';
-}
-
-} // End foreach
+echo make_links($nav);
 
 
 ?>

@@ -62,18 +62,12 @@ break;
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Switch Homework</title>
-    <link href="css/dailystyles.css" type="text/css" rel="stylesheet">
-</head>
-<body>
-<?php include('./includes/header.php');
-?>
+
+
+
+
 <div id="wrapper">
+<main>
 <h1>My Wonderful Switch Daily Homework</h1>
 <?php
 echo $movie;
@@ -90,9 +84,10 @@ echo $movie;
 <li><a href="daily.php?today=Friday">Friday</a></li>
 <li><a href="daily.php?today=Saturday">Saturday</a></li>
 </ul>
-</div>
+
 <!-- end wrapper -->
-</body>
-</html>
+</main>
+</div>
+
 <?php 
 include('./includes/footer.php');

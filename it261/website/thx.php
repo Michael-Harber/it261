@@ -1,18 +1,18 @@
 <?php
 include('config.php');
 include('./includes/header.php'); ?>
+
+
 <div id="wrapper">
 
 <main>
-<h1>Welcome to our contact page!</h1>
+<h1>Thank you for filling out our survey!</h1>
+<h3>You will be recieving an email from us shortly!</h3>
 
 
-<?php
-include('./includes/form.php')
-;?>
 </main>
 <!-- <aside>
-<h3>This is my aside</h3>
+
 
 
 

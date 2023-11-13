@@ -4,7 +4,18 @@ include('./includes/header.php');
 ?>
 <div id="wrapper">
 <div id="hero">
-<img src="images/utdlogo.png" atl="Manchester United">
+<?php
+
+$photos[0] = 'utdlogo';
+$photos[1] = 'spiderman';
+$photos[2] = 'fellowship';
+
+$i = rand(0, 4);
+
+$selected_image = ''.$photos[$i].'.jpg';
+echo '<img src="images/'.$selected_image.'" alt="'.$photos[$i].'" >';
+
+?>
 </div>
 <!-- end hero -->
 <main>

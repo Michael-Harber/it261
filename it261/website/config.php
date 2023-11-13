@@ -34,6 +34,11 @@ switch(THIS_PAGE) {
     $title = 'Gallery page of our Wesbite Project';
     $body = 'gallery';
     break;
+
+    case 'thx.php' :
+    $title = 'Thank You page of our website';
+    $body = 'thanks';
+    break;
 }
 // our navigational array
 $nav = array(
@@ -66,162 +71,133 @@ return $my_return;
 
 
 
+
+
+
 $first_name = '';
 $last_name = '';
 $email = '';
-$gender = '';
-$wines = '';
 $phone = '';
-$regions = '';
-$comments = '';
 $privacy = '';
-
+$movies = '';
+$genre = '';
 
 $first_name_err = '';
 $last_name_err = '';
 $email_err = '';
-$gender_err = '';
-$wines_err = '';
 $phone_err = '';
-$regions_err = '';
-$comments_err = '';
 $privacy_err = '';
+$movies_err = '';
+$genre_err = ''; 
 
 
 if($_SERVER['REQUEST_METHOD'] == "POST") {
 
-//  if inputs are empty, we will declare a statement else we will assignthe $POSTS to a variable
-//  $wines= $_POST['wines']
 
 
-if(empty($_POST['wines'])) {
-// say something or do something
-$wines_err = 'What... no wines?';
-
+if(empty($_POST['movies'])) {        
+$movies_err = 'Don\'t like movies?';
+        
 } else {
-    $wines = $_POST['wines'];
+$movies = $_POST['movies'];
 }
 
 if(empty($_POST['first_name'])) {
-// say something or do something
 $first_name_err = 'Please fill in your first name!';
-    
+        
 } else {
-    $first_name = $_POST['first_name'];
+$first_name = $_POST['first_name'];
 }
 
 if(empty($_POST['last_name'])) {
-// say something or do something
 $last_name_err = 'Please fill in your last name!';
-        
+            
 } else {
-    $last_name = $_POST['last_name'];
+$last_name = $_POST['last_name'];
 }
 
 if(empty($_POST['email'])) {
-// say something or do something
 $email_err = 'Please fill in your email!';
-            
-} else {
-    $last_name = $_POST['email'];
-}
-
-if(empty($_POST['gender'])) {
-// say something or do something
-$gender_err = 'Please check your gender!';
                 
 } else {
-    $gender = $_POST['gender'];
+$email = $_POST['email'];
 }
 
-if(empty($_POST['phone'])) {
-// say something or do something
-$phone_err = 'Please fill in your phone number!';
-                    
-} else {
-    $phone = $_POST['phone'];
-}
+if(empty($_POST['phone'])) { 
+$phone_err = 'Your phone number please!';
+} elseif(array_key_exists('phone', $_POST)){
+if(!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone']))
+{ 
+$phone_err = 'Invalid format!';
+} else{
+$phone = $_POST['phone'];
+} 
+} 
 
-if($_POST['regions'] == NULL) {
-// say something or do something
-$regions_err = 'Please select your region!';
-                        
-} else {
-    $regions = $_POST['regions'];
-}
-
-if(empty($_POST['comments'])) {
-// say something or do something
-$comments_err = 'We value your input!';
+if($_POST['genre'] == NULL) {
+$genre_err = 'Please select your favorite genre!';
                             
 } else {
-    $comments = $_POST['comments'];
+$genre = $_POST['genre'];
 }
 
 if(empty($_POST['privacy'])) {
-// say something or do something
 $privacy_err = 'You must agree to send spam emails!';
-                                
+                                    
 } else {
 $privacy = $_POST['privacy'];
 }
 
-
-
-function my_wines($wines) {
+function my_movies($movies) {
 $my_return='';
-if(!empty($_POST['wines'])) {
-    $my_return = implode(',' , $_POST['wines']);
+if(!empty($_POST['movies'])) {
+$my_return = implode(',' , $_POST['movies']);
 }
 return $my_return;
-
-} // end my_wines function
+}
 
 if(isset($_POST['first_name'],
 $_POST['last_name'],
 $_POST['email'],
-$_POST['gender'],
 $_POST['phone'],
-$_POST['wines'],
-$_POST['regions'],
-$_POST['comments'],
-$_POST['privacy'])) {
+$_POST['privacy'],
+$_POST['movies'],
+$_POST['genre'])) {
 
-    $to = 'szemeo@mystudentswa.com';
-    $subject = 'Test email on '.date('m/d/y, h i A');
-    $body = '
-    First Name: '.$first_name.' '.PHP_EOL.'
-    Last Name: '.$last_name.' '.PHP_EOL.'
-    Email: '.$email.' '.PHP_EOL.'
-    Gender: '.$gender.' '.PHP_EOL.'
-    Phone: '.$phone.' '.PHP_EOL.'
-    Wines: '.my_wines($wines).' '.PHP_EOL.'
-    Region: '.$regions.' '.PHP_EOL.'
-    Comments: '.$comments.' '.PHP_EOL.'
+$to = 'oszemeo@mystudentswa.com';
+$subject = 'Test email on '.date('m/d/y, h i A');
+$body = '
+First Name: '.$first_name.' '.PHP_EOL.'
+Last Name: '.$last_name.' '.PHP_EOL.'
+Email: '.$email.' '.PHP_EOL.'
+Phone: '.$phone.' '.PHP_EOL.'
+Movies: '.my_movies($movies).' '.PHP_EOL.'
+Genre: '.$genre.' '.PHP_EOL.'
+
     
-    ';
+';
 
 $headers = array(
     'From' => 'noreply@mystudentswa.com'
 );
 
-// we will be adding an if statement - that this email form will work ONLY if all the fields are filled out!!!
 
 if(!empty($first_name &&
 $last_name  &&
 $email &&
-$gender &&
 $phone &&
-$wines &&
-$regions &&
-$comments)) {
-
-    mail($to, $subject, $body, $headers);
-    header ('Location:thx.php');
+$movies &&
+$genre) &&
+preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) {
+mail($to, $subject, $body, $headers);
+header ('Location:thx.php');
 }
 
-} // end isset
-} // closing server request method 
+
+} 
+
+} // closing request method
+
 
 
 

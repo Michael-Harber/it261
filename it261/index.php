@@ -81,6 +81,15 @@
     <li><a href="weeks/week6/functions.php">functions.php</a></li> 
 </ul>  
 
+<h3>Week 7</h3>
+<ul>
+    <li><a href="weeks/week7/form3.php">form3.php</a></li>
+    <li><a href="weeks/week7/pictures.php">pictures.php</a></li>
+    <li><a href="weeks/week7/strings.php">strings.php</a></li>
+    <li><a href="weeks/week7/rand.php">rand.php</a></li>
+    
+</ul>  
+
 </aside>
 </main>
 
